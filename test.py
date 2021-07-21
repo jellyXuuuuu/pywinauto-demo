@@ -10,9 +10,6 @@ app = Application(backend="uia").start(\
     + ' https://map.1tyun.ink:8903/newtest"', # timeout=20,
     wait_for_idle=False)
 
-# time.sleep(6.5)  # wait in case if mouse click events happens before the window(chrome page) started
-
-# app.window_(title='New Tab')
 
 # app_new_tab = Application(backend='uia').connect(\
 #     path='D:\\computer\\tools\\googlechrome73\\Google Chrome\\chrome.exe',\
@@ -28,26 +25,6 @@ NewTab = Desktop(backend="uia").window(title_re='1tvideo')
 ''' print all identifires '''
 # NewTab.print_control_identifiers() # prints UI elements subtree
 NewTab.maximize()
-
-# print("================2==================")
-# NewTab.window_text()
-
-# print("================3==================")
-# print(NewTab.from_point(10, 660))
-# print(NewTab.from_point(10, 660).friendly_class_name())
-
-# print("================4==================")
-# print(NewTab.from_point(1270, 660))
-# print(NewTab.from_point(1270, 660).friendly_class_name())
-
-# 定位到树控件
-# win_tree = NewTab.child_window(class_name = "")
-# # 定位树结构里的管理模板节点
-# win_tree.get_item('\ue917').click()
-
-
-# print("================5==================")
-# NewTab.maximize()
 
 
 ''' mouse event '''
@@ -82,9 +59,6 @@ pywinauto.mouse.click(button='left', coords=(680, 870))   # close the tip window
 
 ''' key board event '''
 pywinauto.keyboard.send_keys('^s') # (Ctrl+S), full-screen screening
-# pywinauto.mouse.click(button='left', coords=(1450, 820))  # click 'u取消' in case save html
-# saver = app.window_(title=u'另存为')
-# saver.print_control_identifiers()
 time.sleep(0.5)
 pywinauto.keyboard.send_keys('{ESC}')
 
