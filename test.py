@@ -7,7 +7,7 @@ chrome_dir = r"D:\\computer\\tools\\googlechrome73\\Google Chrome\\chrome.exe"
 app = Application(backend="uia").start(\
     chrome_dir + \
     ' --force-renderer-accessibility'\
-    + ' https://map.1tyun.ink:8903/new"', # timeout=20,
+    + ' https://map.1tyun.ink:8903/newtest"', # timeout=20,
     wait_for_idle=False)
 
 # time.sleep(6.5)  # wait in case if mouse click events happens before the window(chrome page) started
@@ -55,7 +55,12 @@ NewTab.maximize()
 pywinauto.mouse.click(button='left', coords=(1900, 110))   # close 右上角询问为正常关闭
 
 time.sleep(2.5)  # wait in case if mouse click events happens before the window(chrome page) started
+
 pywinauto.mouse.click(button='left', coords=(500, 270))
+
+time.sleep(0.5)  # wait 
+pywinauto.mouse.click(button='left', coords=(850, 950))   # mute yourself
+pywinauto.mouse.click(button='left', coords=(1050, 950))   # video
 
 time.sleep(1)  # wait 
 pywinauto.mouse.click(button='left', coords=(680, 850))   # close the tip window
